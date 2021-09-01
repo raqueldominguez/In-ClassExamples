@@ -22,7 +22,37 @@ namespace WPF_Intro
     {
         public MainWindow()
         {
-            InitializeComponent();kdsjkfnpsd
+            InitializeComponent();
+
+            //first way
+            //lblOutput.Visibility = Visibility.Hidden;
+            lblOutput.Content = "";
+            lblDogOutput.Content = "";
+
+        }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            int age = Convert.ToInt32(txtAge.Text);
+
+            DateTime today = DateTime.Now;
+            int birthYear = today.Year - age;
+
+            //MessageBox.Show($"You were born in {birthYear.ToString("G0")}");
+            lblOutput.Content = $"You were born in {birthYear.ToString("G0")}";
+            lblOutput.Visibility = Visibility.Visible;
+        }
+
+        private void txtName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            int dogAge = Convert.ToInt32(txtDogAge.Text);
+
+            DateTime today = DateTime.Now;
+            int birthYear = today.Year - dogAge;
+
+            //MessageBox.Show($"You were born in {birthYear.ToString("G0")}");
+            lblDogOutput.Content = $"You're fur baby was born in {birthYear.ToString("G0")}";
+            lblDogOutput.Visibility = Visibility.Visible;
         }
     }
 }
