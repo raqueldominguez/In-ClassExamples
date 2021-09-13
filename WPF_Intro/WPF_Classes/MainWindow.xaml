@@ -1,0 +1,25 @@
+﻿<Window x:Class="WPF_Classes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Classes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Sooner ID;" HorizontalAlignment="Left" Margin="81,59,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtID" HorizontalAlignment="Left" Margin="176,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="First Name:" HorizontalAlignment="Left" Margin="81,94,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Margin="176,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Last Name:" HorizontalAlignment="Left" Margin="81,137,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Margin="176,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="GPA:" HorizontalAlignment="Left" Margin="81,208,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtGPA" HorizontalAlignment="Left" Margin="176,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Bursar Balance:" HorizontalAlignment="Left" Margin="81,249,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBursar" HorizontalAlignment="Left" Margin="176,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Add Student" HorizontalAlignment="Left" Margin="81,310,0,0" VerticalAlignment="Top" Height="75" Width="190" Click="Button_Click"/>
+        <ListBox x:Name="lstStudents" Margin="400,4,0,-4" SelectionChanged="lstStudents_SelectionChanged"/>
+        <CheckBox x:Name="chkProbation" Content="On Probation" HorizontalAlignment="Left" Margin="200,166,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
