@@ -11,10 +11,12 @@
             <ImageBrush ImageSource="https://static.vecteezy.com/system/resources/thumbnails/000/092/394/small/comic-style-background-illustration.jpg"/>
         </Grid.Background>
         <TextBox x:Name="txtWord" HorizontalAlignment="Left" Margin="286,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="32"/>
-        <Button x:Name="btnEnter" Content="Enter" HorizontalAlignment="Left" Margin="325,217,0,0" VerticalAlignment="Top" Height="35" Width="92" Click="btnEnter_Click"/>
+        <Button x:Name="btnEnter" Content="Enter" HorizontalAlignment="Left" Margin="325,217,0,0" VerticalAlignment="Top" Height="35" Width="92" Click="btnEnter_Click" IsDefault="True"/>
         <Label x:Name="lblEnterWord" Content="Enter a random word!!" HorizontalAlignment="Left" Margin="286,129,0,0" VerticalAlignment="Top" Height="34" Width="184" FontWeight="Bold" FontSize="16"/>
         <ListBox x:Name="lstVowels" Margin="111,260,535,94"/>
         <ListBox x:Name="lstConsonants" Margin="495,260,151,94"/>
+        <Label Content="Vowels" HorizontalAlignment="Left" Margin="111,222,0,0" VerticalAlignment="Top" Width="77" FontSize="16" FontWeight="Bold" Background="#FFEC2B2D"/>
+        <Label Content="Consonants" HorizontalAlignment="Left" Margin="495,221,0,0" VerticalAlignment="Top" Width="106" FontSize="16" FontWeight="Bold" Background="#FFEC2B2D"/>
 
     </Grid>
 </Window>
