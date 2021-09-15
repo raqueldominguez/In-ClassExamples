@@ -29,9 +29,9 @@ namespace WPF_ToyClass
             Image = image;
         }
 
-        public void GetAisle(string aisle)
+        public string GetAisle()
         {
-            return $"{Manufacturer[0].ToString().ToUpper()} {Price}"; ;
+            return $"{Manufacturer[0].ToString().ToUpper()} {Price}";
         }
 
         public override string ToString()

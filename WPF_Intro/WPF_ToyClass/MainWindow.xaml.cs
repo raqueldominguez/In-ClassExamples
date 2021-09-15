@@ -56,15 +56,16 @@ namespace WPF_ToyClass
             }
 
             lstToy.Items.Add(toys);
-
-            // var uri = new Uri("");
-            // var img = new BitmapImage(uri);
         }
 
         private void lstToy_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Toy selectedToy = (Toy)lstToy.SelectedItem;
             MessageBox.Show($"Found in aisle {selectedToy.GetAisle().ToString()} ");
+
+            var uri = new Uri(selectedToy.Image);
+            var img = new BitmapImage(uri);
+            imgToy.Source = img;
         }
 
     }
