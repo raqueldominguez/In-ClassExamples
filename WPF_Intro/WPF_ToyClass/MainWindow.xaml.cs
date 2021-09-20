@@ -35,17 +35,17 @@ namespace WPF_ToyClass
 
             Toy toys = new Toy(manufacturer, name, Convert.ToDouble(price), image);
 
-            if (string.IsNullOrWhiteSpace(txtManufacturer.Text))
+            if (string.IsNullOrWhiteSpace(txtManufacturer.Text) == true)
             {
                 MessageBox.Show("Please enter a valid Manufacturer.");
             }
 
-            if (string.IsNullOrWhiteSpace(txtName.Text))
+            if (string.IsNullOrWhiteSpace(txtName.Text) == true)
             {
                 MessageBox.Show("Please enter a valid Toy Name.");
             }
 
-            if (string.IsNullOrWhiteSpace(txtImage.Text))
+            if (string.IsNullOrWhiteSpace(txtImage.Text) == true)
             {
                 MessageBox.Show("Please enter a valid Image URL.");
             }
@@ -58,7 +58,7 @@ namespace WPF_ToyClass
             lstToy.Items.Add(toys);
         }
 
-        private void lstToy_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void lstToy_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Toy selectedToy = (Toy)lstToy.SelectedItem;
             MessageBox.Show($"Found in aisle {selectedToy.GetAisle().ToString()} ");
@@ -67,6 +67,5 @@ namespace WPF_ToyClass
             var img = new BitmapImage(uri);
             imgToy.Source = img;
         }
-
     }
 }

@@ -10,7 +10,7 @@ namespace WPF_ToyClass
         public string Name {get; set;}
         public double Price {get; set;}
         public string Image {get; set;}
-        private string Aisle { get; set; }
+        private string Aisle;
 
         public Toy()
         {
@@ -31,7 +31,7 @@ namespace WPF_ToyClass
 
         public string GetAisle()
         {
-            return $"{Manufacturer[0].ToString().ToUpper()} {Price}";
+            return $"{Manufacturer[0].ToString().ToUpper()} {Price.ToString().Replace(".","")}";
         }
 
         public override string ToString()
