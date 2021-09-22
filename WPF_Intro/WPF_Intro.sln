@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Classes", "WPF_Classes\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ToyClass", "WPF_ToyClass\WPF_ToyClass.csproj", "{E8C7D214-8317-44AF-A96D-42600800EF2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Files", "WPF_Files\WPF_Files.csproj", "{BD05524A-D3B7-40FC-B654-97872E030A00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Files", "WPF_Files\WPF_Files.csproj", "{BD05524A-D3B7-40FC-B654-97872E030A00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_ContactList", "WPF_ContactList\WPF_ContactList.csproj", "{7E7A0600-D41B-4214-85FE-5CB8188DD475}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{BD05524A-D3B7-40FC-B654-97872E030A00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD05524A-D3B7-40FC-B654-97872E030A00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD05524A-D3B7-40FC-B654-97872E030A00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E7A0600-D41B-4214-85FE-5CB8188DD475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E7A0600-D41B-4214-85FE-5CB8188DD475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E7A0600-D41B-4214-85FE-5CB8188DD475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E7A0600-D41B-4214-85FE-5CB8188DD475}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
