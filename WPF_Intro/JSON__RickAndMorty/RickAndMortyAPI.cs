@@ -21,12 +21,14 @@ namespace JSON__RickAndMorty
         public string gender { get; set; }
         public string image { get; set; }
         public string url { get; set; }
+
+        public override string ToString()
+        {
+            return $"{name} ({id})";
+        }
     }
 
-    public override string ToString()
-    {
-        return $"{name} ({id})";
-    }
+    
 
     public class Info
     {
