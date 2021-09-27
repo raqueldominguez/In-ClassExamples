@@ -43,8 +43,10 @@ namespace JSON__RickAndMorty
         private void cboCharacters_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Character selected = (Character)cboCharacters.SelectedItem;
-            lblCharacterName.Content = SelectedCellsChangedEventArgs.name;
-            imgCharaterPhoto.Source = new BitImg
+            lblCharacterName.Content = selected.name;
+            imgCharaterPhoto.Source = new BitmapImage(new Uri(selected.image));
+
+            MessageBox.Show($"The url is {selected.ulr}");
         }
     }
 }
