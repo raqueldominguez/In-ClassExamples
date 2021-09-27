@@ -78,7 +78,7 @@ namespace WPF_Files
             }
         }
 
-       /* private void btnReadFile_Click(object sender, RoutedEventArgs e)
+/*        private void btnReadFile1_Click(object sender, RoutedEventArgs e)
         {
             string[] contents = { "Hello this is the contents of my file." };
             string file = "C:\Users\raxdo\Downloads\SalesJan2009.csv";

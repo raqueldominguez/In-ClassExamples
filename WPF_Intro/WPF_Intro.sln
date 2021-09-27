@@ -13,7 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ToyClass", "WPF_ToyClas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Files", "WPF_Files\WPF_Files.csproj", "{BD05524A-D3B7-40FC-B654-97872E030A00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_ContactList", "WPF_ContactList\WPF_ContactList.csproj", "{7E7A0600-D41B-4214-85FE-5CB8188DD475}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ContactList", "WPF_ContactList\WPF_ContactList.csproj", "{7E7A0600-D41B-4214-85FE-5CB8188DD475}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "REDO_Toy", "REDO_Toy\REDO_Toy.csproj", "{0D790B6C-A07A-4B91-8062-3E6D23B0AFBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON_RickAndMorty", "JSON_RickAndMorty\JSON_RickAndMorty.csproj", "{2D4D332F-1D70-483D-9878-1B85E18B8C4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON__RickAndMorty", "JSON__RickAndMorty\JSON__RickAndMorty.csproj", "{7CB715C0-D983-42A1-BE62-DBBEED44C667}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{7E7A0600-D41B-4214-85FE-5CB8188DD475}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E7A0600-D41B-4214-85FE-5CB8188DD475}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E7A0600-D41B-4214-85FE-5CB8188DD475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D790B6C-A07A-4B91-8062-3E6D23B0AFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D790B6C-A07A-4B91-8062-3E6D23B0AFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D790B6C-A07A-4B91-8062-3E6D23B0AFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D790B6C-A07A-4B91-8062-3E6D23B0AFBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D4D332F-1D70-483D-9878-1B85E18B8C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D4D332F-1D70-483D-9878-1B85E18B8C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D4D332F-1D70-483D-9878-1B85E18B8C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D4D332F-1D70-483D-9878-1B85E18B8C4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CB715C0-D983-42A1-BE62-DBBEED44C667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CB715C0-D983-42A1-BE62-DBBEED44C667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CB715C0-D983-42A1-BE62-DBBEED44C667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CB715C0-D983-42A1-BE62-DBBEED44C667}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

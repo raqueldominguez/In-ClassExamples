@@ -74,7 +74,7 @@ namespace WPF_Classes
 
         public override string ToString()
         {
-            return $"{LastName}, {FirstName} ({SoonerID.ToString("N0")}";
+            return $"{LastName}, {FirstName} ({SoonerID.ToString("N0")})";
         }
     }
 }

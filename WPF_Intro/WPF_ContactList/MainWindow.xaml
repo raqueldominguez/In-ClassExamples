@@ -9,13 +9,12 @@
     <Grid>
         <Label Content="First Name" HorizontalAlignment="Left" Margin="63,109,0,0" VerticalAlignment="Top" Height="40" Width="105"/>
         <ListBox x:Name="lstContacts" Margin="475,0,0,0"/>
-        <Button x:Name="btnFile" Content="Open Contacts" HorizontalAlignment="Left" Margin="160,30,0,0" VerticalAlignment="Top" Height="54" Width="136" Click="btnFile_Click"/>
-        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Margin="168,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Margin="168,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Label Content="Last Name" HorizontalAlignment="Left" Margin="63,157,0,0" VerticalAlignment="Top" Height="40" Width="105"/>
-        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Margin="168,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Margin="168,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Label Content="Photo" HorizontalAlignment="Left" Margin="63,252,0,0" VerticalAlignment="Top" Height="40" Width="105"/>
         <Label Content="Email" HorizontalAlignment="Left" Margin="63,202,0,0" VerticalAlignment="Top" Height="40" Width="105"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="168,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="168,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Image x:Name="imgPhoto" HorizontalAlignment="Left" Height="159" Margin="168,242,0,0" VerticalAlignment="Top" Width="182"/>
         <Button x:Name="btnDetails" Content="Show Details" HorizontalAlignment="Left" Margin="340,27,0,0" VerticalAlignment="Top" Height="57" Width="103" Click="btnDetails_Click"/>
 

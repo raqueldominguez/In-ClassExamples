@@ -24,10 +24,7 @@ namespace WPF_ContactList
         public MainWindow()
         {
             InitializeComponent();
-        }
 
-        private void btnFile_Click(object sender, RoutedEventArgs e)
-        {
             string[] lines = File.ReadAllLines("contacts.txt");
 
             for (int i = 1; i < lines.Length; i++)
@@ -44,6 +41,7 @@ namespace WPF_ContactList
                 lstContacts.Items.Add(contact);
             }
         }
+
 
         private void btnDetails_Click(object sender, RoutedEventArgs e)
         {

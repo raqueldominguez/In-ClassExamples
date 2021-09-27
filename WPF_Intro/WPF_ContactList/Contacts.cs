@@ -21,9 +21,14 @@ namespace WPF_ContactList
             Photo = string.Empty;
         }
 
+       /* public Contacts(int id, string first, string last, string email, string photo)
+        {
+
+        }*/
+
         public override string ToString()
         {
-            return $"{FirstName}, {LastName}, {Email}";
+            return $"{FirstName}, {LastName}";
         }
     }
 }
