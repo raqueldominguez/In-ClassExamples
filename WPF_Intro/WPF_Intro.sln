@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ContactList", "WPF_Cont
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSON__RickAndMorty", "JSON__RickAndMorty\JSON__RickAndMorty.csproj", "{7CB715C0-D983-42A1-BE62-DBBEED44C667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REDO_Toy", "REDO_Toy\REDO_Toy.csproj", "{835EBA89-9299-43FE-AC36-03762F766D00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "REDO_Toy", "REDO_Toy\REDO_Toy.csproj", "{835EBA89-9299-43FE-AC36-03762F766D00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REDO_Contacts", "REDO_Contacts\REDO_Contacts.csproj", "{5D5D9707-2441-4CA5-904A-9A13C4BBB92E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{835EBA89-9299-43FE-AC36-03762F766D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{835EBA89-9299-43FE-AC36-03762F766D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{835EBA89-9299-43FE-AC36-03762F766D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D5D9707-2441-4CA5-904A-9A13C4BBB92E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D5D9707-2441-4CA5-904A-9A13C4BBB92E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D5D9707-2441-4CA5-904A-9A13C4BBB92E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D5D9707-2441-4CA5-904A-9A13C4BBB92E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
