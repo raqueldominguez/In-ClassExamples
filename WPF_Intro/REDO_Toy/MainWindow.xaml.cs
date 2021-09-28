@@ -46,12 +46,19 @@ namespace REDO_Toy
             {
                 MessageBox.Show("Please enter a valid image.");
             }
+            /*
+                        Toy toys = new Toy();
+                        toys.Manufacturer = txtManufacturer.Text;
+                        toys.Name = txtName.Text;
+                        toys.Price = price;
+                        toys.Image = txtImage.Text;*/
+            //^without a class with parameters
 
-            Toy toys = new Toy();
-            toys.Manufacturer = txtManufacturer.Text;
-            toys.Name = txtName.Text;
-            toys.Price = price;
-            toys.Image = txtImage.Text;
+            string manufacturer = txtManufacturer.Text;
+            string name = txtName.Text;
+             price = Convert.ToDouble(txtPrice.Text);
+            string image = txtImage.Text;
+            Toy toys = new Toy(manufacturer, name, price, image);
 
 
             lstToy.Items.Add(toys);
