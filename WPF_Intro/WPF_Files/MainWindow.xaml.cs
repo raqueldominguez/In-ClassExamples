@@ -24,9 +24,22 @@ namespace WPF_Files
         public MainWindow()
         {
             InitializeComponent();
+
+            string[] lines = File.ReadAllLines("SalesData.cs");
+
+            for (int i = 1; i < lines.Length; i++)
+            {
+                string line = lines[i];
+                string[] pieces = line.Split(",");
+
+                SalesData sd = new SalesData(pieces[0], pieces[1], pieces[2], pieces[3], pieces[4], pieces[5], pieces[6], pieces[7], pieces[8], pieces[9], pieces[10], pieces[11]);
+                lstContents.Items.Add(sd);
+            }
+
+            
         }
 
-        private void btnReadFile_Click(object sender, RoutedEventArgs e)
+        /*private void btnReadFile_Click(object sender, RoutedEventArgs e)
         {
             //Transaction_date,Product,Price,Payment_Type,Name,City,State,Country,Account_Created,Last_Login,Latitude,Longitude
             //1/2/09 6:17,Product1,1200,Mastercard,carolina,Basildon,England,United Kingdom,1/2/09 6:00,1/2/09 6:08,51.5,-1.1166667
@@ -76,7 +89,7 @@ namespace WPF_Files
                 }
 
             }
-        }
+        }*/
 
 /*        private void btnReadFile1_Click(object sender, RoutedEventArgs e)
         {

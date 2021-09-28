@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "REDO_Toy", "REDO_Toy\REDO_T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REDO_Contacts", "REDO_Contacts\REDO_Contacts.csproj", "{5D5D9707-2441-4CA5-904A-9A13C4BBB92E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGAIN_TOY", "AGAIN_TOY\AGAIN_TOY.csproj", "{ADF801B7-82AB-486C-83DA-AF30C9D2EA54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{5D5D9707-2441-4CA5-904A-9A13C4BBB92E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D5D9707-2441-4CA5-904A-9A13C4BBB92E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D5D9707-2441-4CA5-904A-9A13C4BBB92E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF801B7-82AB-486C-83DA-AF30C9D2EA54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF801B7-82AB-486C-83DA-AF30C9D2EA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF801B7-82AB-486C-83DA-AF30C9D2EA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF801B7-82AB-486C-83DA-AF30C9D2EA54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
