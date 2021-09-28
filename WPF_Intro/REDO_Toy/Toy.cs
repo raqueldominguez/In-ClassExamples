@@ -10,7 +10,7 @@ namespace REDO_Toy
         public string Name {get;set;}
         public double Price {get;set;}
         public string Image { get; set; }
-        private string  Aisle;
+        private string Aisle;
 
         public Toy()
         {
@@ -31,12 +31,12 @@ namespace REDO_Toy
 
         public string GetAisle()
         {
-            return $"{Manufacturer[0].ToString().ToUpper()} {Price.ToString().Trim()}";
+            return $"{Manufacturer[0].ToString().ToUpper()}{Price.ToString().Replace(",","")}";
         }
 
         public override string ToString()
         {
-            return $"{Manufacturer} - {Name}";
+            return $"{Manufacturer} - {Name}"; 
         }
     }
 }

@@ -7,17 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Manufacturer" HorizontalAlignment="Left" Margin="73,90,0,0" VerticalAlignment="Top"/>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="73,154,0,0" VerticalAlignment="Top"/>
-        <Label Content="Image URL" HorizontalAlignment="Left" Margin="92,0,0,0" VerticalAlignment="Center"/>
-        <Label Content="Price" HorizontalAlignment="Left" Margin="92,258,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtManufacturer" HorizontalAlignment="Left" Margin="211,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="211,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtImageURL" HorizontalAlignment="Left" Margin="234,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Margin="234,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ListBox x:Name="lstToy" Margin="482,60,0,0" SelectionChanged="lstToy_SelectionChanged"/>
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="234,330,0,0" VerticalAlignment="Top" Click="btnAdd_Click"/>
-        <Image x:Name="imgToy" HorizontalAlignment="Left" Height="100" Margin="379,31,0,0" VerticalAlignment="Top" Width="100"/>
-
+        <Grid.Background>
+            <ImageBrush ImageSource="https://www.cnet.com/a/img/xh7SVje9bq1_azlPW73EGrHHJVQ=/1200x630/2020/10/28/5a601f4a-06c8-4374-b10d-9f07fe183390/babyyoda-target-1.png"/>
+        </Grid.Background>
+        <Label Content="Manufacturer" HorizontalAlignment="Left" Margin="39,85,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox x:Name="txtManufacturer" HorizontalAlignment="Left" Margin="39,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Name of Toy" HorizontalAlignment="Left" Margin="39,157,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="39,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtImage" HorizontalAlignment="Left" Margin="39,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Price of Toy" HorizontalAlignment="Left" Margin="39,275,0,0" VerticalAlignment="Top" Width="104"/>
+        <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Margin="39,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="56,341,0,0" VerticalAlignment="Top" Height="33" Width="78" Click="btnAdd_Click" IsDefault="True"/>
+        <ListBox x:Name="lstToy" Margin="569,117,0,60" MouseDoubleClick="lstToy_MouseDoubleClick"/>
+        <Label Content="Image URL" HorizontalAlignment="Left" Margin="39,220,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="imgToy" HorizontalAlignment="Left" Height="100" Margin="214,310,0,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>

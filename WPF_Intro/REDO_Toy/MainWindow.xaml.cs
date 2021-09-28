@@ -27,12 +27,8 @@ namespace REDO_Toy
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            string manufacturer = txtManufacturer.Text;
-            string name = txtName.Text;
-            double price = Convert.ToDouble(txtPrice.Text);
-            string image = txtImageURL.Text;
 
-            Toy toys = new Toy(manufacturer, name, Convert.ToDouble(price), image);
+            double price;
 
             if (string.IsNullOrWhiteSpace(txtManufacturer.Text) == true)
             {
@@ -46,18 +42,30 @@ namespace REDO_Toy
             {
                 MessageBox.Show("Please enter a valid price.");
             }
-            if (string.IsNullOrWhiteSpace(txtImageURL.Text) == true)
+            if (string.IsNullOrWhiteSpace(txtImage.Text) == true)
             {
-                MessageBox.Show("Please enter a valid image URL.");
+                MessageBox.Show("Please enter a valid image.");
             }
 
+            Toy toys = new Toy();
+            toys.Manufacturer = txtManufacturer.Text;
+            toys.Name = txtName.Text;
+            toys.Price = price;
+            toys.Image = txtImage.Text;
+
+
             lstToy.Items.Add(toys);
+
+            txtManufacturer.Clear();
+            txtName.Clear();
+            txtPrice.Clear();
+            txtImage.Clear();
         }
 
-        private void lstToy_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void lstToy_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Toy selectedToy = (Toy)lstToy.SelectedItem;
-            MessageBox.Show($"Found in aisle {selectedToy.GetAisle().ToString()}");
+            MessageBox.Show($"Your toy can be found in aisle {selectedToy.GetAisle().ToString()}");
 
             var uri = new Uri(selectedToy.Image);
             var img = new BitmapImage(uri);
