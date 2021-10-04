@@ -48,8 +48,12 @@ namespace WPF_Classes
                         }*/
 
             stud.IsOnProbation = chkProbation.IsChecked.Value;
+            if (stud.IsOnProbation == true)
+            {
+                lstStudents.Items.Add(stud);
+            }
 
-            lstStudents.Items.Add(stud);
+            
         }
 
         private void lstStudents_SelectionChanged(object sender, SelectionChangedEventArgs e)
