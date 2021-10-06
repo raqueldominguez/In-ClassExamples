@@ -6,9 +6,12 @@ namespace JSON_ChuckNorrisJokes
 {
     public class ChuckNorrisAPI
     {
-        public string Icon_URL {get; set;}
-        public string Id { get; set; }
-        public string Url { get; set; }
-        public string Value { get; set; }
+        public List<string> categories {get; set;}
+        public string created_at { get; set; }
+        public string icon_url { get; set; }
+        public string id { get; set; }
+        public string updated_at { get; set; }
+        public string url { get; set; }
+        public string value { get; set; }
     }
 }

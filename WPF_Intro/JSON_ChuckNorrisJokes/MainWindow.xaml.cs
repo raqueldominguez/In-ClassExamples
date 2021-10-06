@@ -43,26 +43,24 @@ namespace JSON_ChuckNorrisJokes
 
         private void btnSelect_Click(object sender, RoutedEventArgs e)
         {
-            ChuckNorrisAPI selected = (ChuckNorrisAPI)cboCategory.SelectedItem;
+            string url = "https://api.chucknorris.io/jokes/random?category=";
+            if (cb)
+            {
+
+            }
+
+            string category = cboCategory.SelectedValue.ToString();
+
+            url += category;
 
             using (var client = new HttpClient())
             {
-                if (selected.ToString() == "all")
-                {
-                        string json = client.GetStringAsync("https://api.chucknorris.io/jokes/random").Result;
 
-                        List<string> categories = JsonConvert.DeserializeObject<List<string>>(json);
+                string json = client.GetStringAsync("https://api.chucknorris.io/jokes/random").Result;
+                ChuckNorrisAPI joke = JsonConvert.DeserializeObject<ChuckNorrisAPI>(json);
+                lstJoke.Items.Add(json);
 
-                        lstJoke.Items.Add(json);
-                }
-                else
-                {
-                        string json = client.GetStringAsync($"https://api.chucknorris.io/jokes/random?category="+ selected.ToString()).Result;
 
-                        ChuckNorrisAPI joke = JsonConvert.DeserializeObject<List<string>>(json);
-
-                        lstJoke.Items.Add(json);
-                }
             }
         }
     }
