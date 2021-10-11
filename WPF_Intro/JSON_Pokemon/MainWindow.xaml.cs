@@ -22,13 +22,13 @@ namespace JSON_Pokemon
     /// </summary>
     public partial class MainWindow : Window
     {
-        private PokemonInfo pokemon;
-        private Boolean showBack;
+        private PokemonInfo poke;
+        private bool showBack;
 
         public MainWindow()
         {
             InitializeComponent();
-            cboPokemon.Items.Clear();
+            //cboPokemon.Items.Clear();
 
             string url = "https://pokeapi.co/api/v2/pokemon?offset=00&limit=1200";
 
@@ -58,23 +58,11 @@ namespace JSON_Pokemon
 
         }
 
-        private void btnToggle_Click(object sender, RoutedEventArgs e)
-        {
-            if (showBack)
-            {
-                imgPokemon.Source = new BitmapImage(new Uri(pokemon.sprites.back_default));
-                showBack = false;
-            }
-            else
-            {
-                imgPokemon.Source = new BitmapImage(new Uri(pokemon.sprites.back_default));
-                showBack = true;
-            }
-        }
 
         private void cboPokemon_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Pokemon selected = (Pokemon)cboPokemon.SelectedItem;
+
             using (var client = new HttpClient())
             {
                 //string json = client.GetStringAsync("https://pokeapi.co/api/v2/pokemon?offset=00&limit=1200").Result;
@@ -83,14 +71,27 @@ namespace JSON_Pokemon
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     string json = response.Content.ReadAsStringAsync().Result;
-                    PokemonInfo api = JsonConvert.DeserializeObject<PokemonInfo>(json);
+                    poke = JsonConvert.DeserializeObject<PokemonInfo>(json);
 
-                    imgPokemon.Source = new BitmapImage(new Uri(api.sprites.front_default));
+                    imgPokemon.Source = new BitmapImage(new Uri(poke.sprites.front_default));
                     showBack = true;
                 }
+            }
+            txtHeight.Text = poke.height.ToString();
+            txtWeight.Text = poke.weight.ToString();
+        }
 
-                /*txtHeight.Text = pokemon.height;
-                txtWeight.Text = pokemon.weight;*/
+        private void btnToggle_Click(object sender, RoutedEventArgs e)
+        {
+            if (showBack)
+            {
+                imgPokemon.Source = new BitmapImage(new Uri(poke.sprites.back_default));
+                showBack = false;
+            }
+            else
+            {
+                imgPokemon.Source = new BitmapImage(new Uri(poke.sprites.front_default));
+                showBack = true;
             }
         }
     }
