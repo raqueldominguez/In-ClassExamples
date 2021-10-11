@@ -14,19 +14,17 @@ namespace JSON_Pokemon
     {
         public string name { get; set; }
         public string url { get; set; }
-        public string weight { get; set; }
-        public string height { get; set; }
+
 
         public override string ToString()
         {
-            return $"{name}"; 
+            return $"{name}";
         }
 
         public Pokemon()
         {
             name = string.Empty;
-            weight = string.Empty;
-            height = string.Empty;
+
         }
     }
 }

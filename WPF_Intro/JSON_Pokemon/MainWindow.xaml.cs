@@ -22,36 +22,76 @@ namespace JSON_Pokemon
     /// </summary>
     public partial class MainWindow : Window
     {
+        private PokemonInfo pokemon;
+        private Boolean showBack;
+
         public MainWindow()
         {
             InitializeComponent();
             cboPokemon.Items.Clear();
 
+            string url = "https://pokeapi.co/api/v2/pokemon?offset=00&limit=1200";
+
             using (var client = new HttpClient())
             {
-                string json = client.GetStringAsync("https://pokeapi.co/api/v2/pokemon?offset=00&limit=1200").Result;
+                //string json = client.GetStringAsync("https://pokeapi.co/api/v2/pokemon?offset=00&limit=1200").Result;
+                var response = client.GetAsync(url).Result;
 
-                PokemonAPI api = JsonConvert.DeserializeObject<PokemonAPI>(json);
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    string json = response.Content.ReadAsStringAsync().Result;
+                    PokemonAPI api = JsonConvert.DeserializeObject<PokemonAPI>(json);
+                    foreach (var pokemon in api.results)
+                    {
+                        cboPokemon.Items.Add(pokemon);
+                    }
+                    
+                }
+
+                /*PokemonAPI api = JsonConvert.DeserializeObject<PokemonAPI>(json);
 
                 foreach (Pokemon item in api.results)
                 {
                     cboPokemon.Items.Add(item);
-                }
+                }*/
             }
 
         }
 
         private void btnToggle_Click(object sender, RoutedEventArgs e)
         {
-
+            if (showBack)
+            {
+                imgPokemon.Source = new BitmapImage(new Uri(pokemon.sprites.back_default));
+                showBack = false;
+            }
+            else
+            {
+                imgPokemon.Source = new BitmapImage(new Uri(pokemon.sprites.back_default));
+                showBack = true;
+            }
         }
 
         private void cboPokemon_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Pokemon pokemon = (Pokemon)cboPokemon.SelectedItem;
+            Pokemon selected = (Pokemon)cboPokemon.SelectedItem;
+            using (var client = new HttpClient())
+            {
+                //string json = client.GetStringAsync("https://pokeapi.co/api/v2/pokemon?offset=00&limit=1200").Result;
+                var response = client.GetAsync(selected.url).Result;
 
-            txtHeight.Text = pokemon.height;
-            txtWeight.Text = pokemon.weight;
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    string json = response.Content.ReadAsStringAsync().Result;
+                    PokemonInfo api = JsonConvert.DeserializeObject<PokemonInfo>(json);
+
+                    imgPokemon.Source = new BitmapImage(new Uri(api.sprites.front_default));
+                    showBack = true;
+                }
+
+                /*txtHeight.Text = pokemon.height;
+                txtWeight.Text = pokemon.weight;*/
+            }
         }
     }
 }
