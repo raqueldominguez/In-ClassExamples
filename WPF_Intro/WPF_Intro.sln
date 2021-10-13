@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSON_ChuckNorrisJokes", "JS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSON_Pokemon", "JSON_Pokemon\JSON_Pokemon.csproj", "{BB76D5CD-500B-4A28-9283-2FC4E5DDA986}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON_FinishRickAndMorty", "JSON_FinishRickAndMorty\JSON_FinishRickAndMorty.csproj", "{5E9623FB-B2A4-4B3A-8A07-E78B21E84D3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSON_FinishRickAndMorty", "JSON_FinishRickAndMorty\JSON_FinishRickAndMorty.csproj", "{5E9623FB-B2A4-4B3A-8A07-E78B21E84D3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "(P) GOT Quote", "(P) GOT Quote\(P) GOT Quote.csproj", "{FA7C478B-72B9-473E-B689-5E502F7443BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{5E9623FB-B2A4-4B3A-8A07-E78B21E84D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E9623FB-B2A4-4B3A-8A07-E78B21E84D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E9623FB-B2A4-4B3A-8A07-E78B21E84D3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA7C478B-72B9-473E-B689-5E502F7443BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA7C478B-72B9-473E-B689-5E502F7443BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA7C478B-72B9-473E-B689-5E502F7443BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA7C478B-72B9-473E-B689-5E502F7443BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -29,9 +29,13 @@ namespace JSON_FinishRickAndMorty
 
             using (var client = new HttpClient())
             {
-                Info i = new Info();
-                i.pages = 34;
-                for (int j = 0; j < i.pages; i++)
+                /*Info info = new Info();
+                info.pages = 34;
+                for (int j = 0; j < info.pages; j++)
+                {*/
+
+                string url = "https://rickandmortyapi.com/api/character";
+                while (url != null)
                 {
                     string jsonData = client.GetStringAsync("https://rickandmortyapi.com/api/character?pages{i}").Result;
 
@@ -41,7 +45,10 @@ namespace JSON_FinishRickAndMorty
                     {
                         cboCharacters.Items.Add(item);
                     }
-                }                 
+                    url = api.info.next;
+                }
+
+                //}                 
             }
             
         }
