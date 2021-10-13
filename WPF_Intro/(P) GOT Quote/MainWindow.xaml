@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPrAKcSaMspp-vJn4MgJBEuX-GlpAI2cDepE1D0woft90pUKzlYRCXHmxg0LeAUPacIkw&amp;usqp=CAU"/>
+        </Grid.Background>
+        <Button x:Name="btnQuote" Content="Get Quote" HorizontalAlignment="Left" Margin="30,337,0,0" VerticalAlignment="Top" Height="55" Width="87" Click="btnQuote_Click"/>
+        <Button x:Name="btnSave" Content="Save Quotes" HorizontalAlignment="Left" Margin="678,337,0,0" VerticalAlignment="Top" Height="55" Width="90" Click="btnSave_Click"/>
+        <ListBox x:Name="lstQuotes" Margin="0,0,613,235"/>
 
     </Grid>
 </Window>
