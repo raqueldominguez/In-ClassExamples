@@ -44,14 +44,12 @@ namespace _P__GOT_Quote
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-
             using (var clien = new HttpClient())
             {
                 string FileName = "GOT_Quotes.json";
                 string jsonString = JsonConvert.SerializeObject(quotessss);
                 File.WriteAllText(FileName, jsonString);
             }          
-
         }
     }
 }
