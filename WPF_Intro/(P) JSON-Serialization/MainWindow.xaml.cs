@@ -21,7 +21,7 @@ namespace _P__JSON_Serialization
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<GamesAPI> games = new List<GamesAPI>();
+        List<GamesAPI> gamessss = new List<GamesAPI>();
         public MainWindow()
         {
             InitializeComponent();
@@ -34,8 +34,9 @@ namespace _P__JSON_Serialization
                 string[] pieces = line.Split(",");
 
                 GamesAPI games = new GamesAPI(pieces[0],pieces[1], pieces[2], pieces[3], Convert.ToInt32(pieces[5]), pieces[6]);
+                gamessss.Add(games); 
 
-                if (games.)
+                if (gamessss.Contains(games))
                 {
                     cboFilter.Items.Add(pieces[1]);
                 }
