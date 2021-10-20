@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_P__JSON_Serialization"
         mc:Ignorable="d"
-        Title="Export" Height="450" Width="800">
+        Title="Export" Height="450" Width="523">
     <Grid>
         <Button Content="Export" HorizontalAlignment="Left" Margin="322,130,0,0" VerticalAlignment="Top" Height="48" Width="104" Click="Button_Click"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="38,69,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="109,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

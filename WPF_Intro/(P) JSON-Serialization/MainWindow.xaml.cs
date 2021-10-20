@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,38 +22,79 @@ namespace _P__JSON_Serialization
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<GamesAPI> gamessss = new List<GamesAPI>();
+        private List<GamesAPI> AllGames = new List<GamesAPI>();
         public MainWindow()
         {
             InitializeComponent();
+            cboFilter.Items.Add("All");
+            string[] lines = File.ReadAllLines("all_games.csv").Skip(1).ToArray();
 
-            string[] lines = File.ReadAllLines("all_games.csv");
-
-            for (int i = 1; i < lines.Length; i++)
+            foreach (string line in lines)
             {
-                string line = lines[i];
                 string[] pieces = line.Split(",");
 
-                GamesAPI games = new GamesAPI(pieces[0],pieces[1], pieces[2], pieces[3], Convert.ToInt32(pieces[5]), pieces[6]);
-                gamessss.Add(games); 
+                //0         1           2               3           4                5
+                //name  platform    release_date    summary     meta_score      user_review
 
-                if (gamessss.Contains(games))
+                GamesAPI g = new GamesAPI()
                 {
-                    cboFilter.Items.Add(pieces[1]);
+                    name = pieces[0].Trim(),
+                    platform = pieces[1].Trim(),
+                    release_date = pieces[2].Trim(),
+                    summary = pieces[3].Trim(),
+                    meta_score = Convert.ToInt32(pieces[4]),
+                    user_review = pieces[5].Trim()
+                };
+
+                if (cboFilter.Items.Contains(g.platform.Trim()) == false)
+                {
+                    cboFilter.Items.Add(g.platform.Trim());
                 }
+
+                lstGames.Items.Add(g);
+                AllGames.Add(g);
             }
+            lblResultCount.Content = $"Result Count: {lstGames.Items.Count.ToString("n0")}"; 
         }
 
         private void cboFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            GamesAPI selected = (GamesAPI)cboFilter.SelectedItem;
-            lstGames.Items.Add(selected.name);
+            string selected = cboFilter.Text;
+            lstGames.Items.Clear();
+            foreach (GamesAPI games in AllGames)
+            {
+                if (selected.ToLower() == "All")
+                {
+                    lstGames.Items.Add(games);
+                }
+                else if(selected == games.platform)
+                {
+                    lstGames.Items.Add(games);
+                }
+            }
         }
 
-        private void lstGames_SelectionChanged(object sender, SelectionChangedEventArgs e)
+
+        private void lstGames_MouseDoubleClick_1(object sender, MouseButtonEventArgs e)
         {
-            Export export = new Export();
-            export.ShowDialog();
+            GamesAPI selectedgame = (GamesAPI)lstGames.SelectedItem;
+
+            if (selectedgame is null)
+            {
+                return;
+            }
+
+            Export wd = new Export();
+            wd.SetData(selectedgame);
+            wd.Show();
+        }
+
+        private void btnExport_Click(object sender, RoutedEventArgs e)
+        {
+            string json = JsonConvert.SerializeObject(lstGames.Items, Formatting.Indented);
+            string selectedgame = cboFilter.Text;
+            File.WriteAllText($"{selectedgame}";
+
         }
     }
 }

@@ -23,7 +23,7 @@ namespace _P__JSON_Serialization
             user_review = string.Empty;
         }
 
-        public GamesAPI(string Name, string Platform, string Release_Date, string Summary, int Meta_Score, string USer_Review)
+/*        public GamesAPI(string Name, string Platform, string Release_Date, string Summary, int Meta_Score, string USer_Review)
         {
             name = Name;
             platform = Platform;
@@ -31,7 +31,7 @@ namespace _P__JSON_Serialization
             summary = Summary;
             meta_score = Meta_Score;
             user_review = USer_Review;
-        }
+        }*/
 
         public override string ToString()
         {

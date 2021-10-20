@@ -25,14 +25,14 @@ namespace _P__JSON_Serialization
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        public void SetData(GamesAPI selected)
         {
-            using (var clien = new HttpClient())
-            {
-                //string FileName = "games.json";
-                //string jsonString = JsonConvert.SerializeObject();
-                //File.WriteAllText(FileName, jsonString);
-            }
+            txtName.Text = selected.name.ToString();
+            //continue for all info
+
+            Title = $"{selected} Info";
         }
+
     }
 }
