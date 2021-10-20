@@ -93,8 +93,7 @@ namespace _P__JSON_Serialization
         {
             string json = JsonConvert.SerializeObject(lstGames.Items, Formatting.Indented);
             string selectedgame = cboFilter.Text;
-            File.WriteAllText($"{selectedgame}";
-
+            File.WriteAllText($"{selectedgame}_games.json", json);
         }
     }
 }
