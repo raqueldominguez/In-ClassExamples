@@ -79,10 +79,10 @@ namespace _P__JSON_Serialization
         {
             GamesAPI selectedgame = (GamesAPI)lstGames.SelectedItem;
 
-            if (selectedgame is null)
+           /* if (selectedgame is null)
             {
                 return;
-            }
+            }*/
 
             Export wd = new Export();
             wd.SetData(selectedgame);
