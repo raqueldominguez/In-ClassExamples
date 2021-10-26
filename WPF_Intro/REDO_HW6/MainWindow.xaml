@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button x:Name="btnFilter" Content="Button" HorizontalAlignment="Left" Margin="122,329,0,0" VerticalAlignment="Top" Click="btnFilter_Click"/>
+        <ComboBox x:Name="cboCountry" HorizontalAlignment="Left" Margin="76,89,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Margin="115,216,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="lstWines" Margin="496,10,0,0" MouseDoubleClick="lstWines_MouseDoubleClick"/>
+        <Button x:Name="btnExport" Content="Button" HorizontalAlignment="Left" Margin="422,365,0,0" VerticalAlignment="Top" Click="btnExport_Click"/>
 
     </Grid>
 </Window>
