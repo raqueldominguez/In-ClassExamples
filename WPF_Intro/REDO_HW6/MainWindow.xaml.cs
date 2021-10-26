@@ -75,10 +75,10 @@ namespace REDO_HW6
 
         private void lstWines_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            string selectedWine = (string)lstWines.SelectedItem;
+            Wine selectedWine = (Wine)lstWines.SelectedItem;
 
             NewWindow wd = new NewWindow();
-            wd.ShowInfo(Convert.ToString(selectedWine));
+            wd.ShowInfo(selectedWine);
             wd.Show();
         }
     }
