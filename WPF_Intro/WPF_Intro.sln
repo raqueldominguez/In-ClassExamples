@@ -35,7 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "(P) GOT Quote", "(P) GOT Qu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "(P) JSON-Serialization", "(P) JSON-Serialization\(P) JSON-Serialization.csproj", "{B2A8A267-BBB2-4550-B556-1D56C246B2F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REDO_GOT", "REDO_GOT\REDO_GOT.csproj", "{2007E779-EACF-4850-B71B-83F0D953AEDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "REDO_GOT", "REDO_GOT\REDO_GOT.csproj", "{2007E779-EACF-4850-B71B-83F0D953AEDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REDO_HW6", "REDO_HW6\REDO_HW6.csproj", "{C74D7C5B-F325-433C-9BE6-9D5F3B12FA1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{2007E779-EACF-4850-B71B-83F0D953AEDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2007E779-EACF-4850-B71B-83F0D953AEDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2007E779-EACF-4850-B71B-83F0D953AEDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C74D7C5B-F325-433C-9BE6-9D5F3B12FA1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C74D7C5B-F325-433C-9BE6-9D5F3B12FA1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C74D7C5B-F325-433C-9BE6-9D5F3B12FA1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C74D7C5B-F325-433C-9BE6-9D5F3B12FA1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
