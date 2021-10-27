@@ -60,13 +60,22 @@ namespace REDO_HW6
         {
             string selectedCountry = (string)cboCountry.Text;
 
-            foreach (var w in wines)
+            foreach (Wine w in wines)
             {
                 if (selectedCountry == "All")
                 {
                     lstWines.Items.Add(w);
                 }
                 else if (selectedCountry == w.country)
+                {
+                    lstWines.Items.Add(w);
+                }
+
+                if (w.price == Convert.ToString(txtPrice.Text))
+                {
+                    lstWines.Items.Add(w);
+                }
+                if (Convert.ToDouble(w.price) >= Convert.ToDouble(txtPrice.Text))
                 {
                     lstWines.Items.Add(w);
                 }
