@@ -41,6 +41,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "REDO_HW6", "REDO_HW6\REDO_H
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_Example", "MVC_Example\MVC_Example.csproj", "{7771A6D4-F775-4CE6-BCF1-5794C89514FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "(P) MVC - Beginner", "(P) MVC - Beginner\(P) MVC - Beginner.csproj", "{FA016A49-9D13-46A7-8D28-4C0EADEBC50B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{7771A6D4-F775-4CE6-BCF1-5794C89514FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7771A6D4-F775-4CE6-BCF1-5794C89514FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7771A6D4-F775-4CE6-BCF1-5794C89514FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA016A49-9D13-46A7-8D28-4C0EADEBC50B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA016A49-9D13-46A7-8D28-4C0EADEBC50B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA016A49-9D13-46A7-8D28-4C0EADEBC50B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA016A49-9D13-46A7-8D28-4C0EADEBC50B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
