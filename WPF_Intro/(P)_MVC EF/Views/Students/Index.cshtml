@@ -2,44 +2,52 @@
 
 @{
     ViewBag.Title = "Index";
+    string backColor = "red";
 }
 
-<h2>Index</h2>
+<h2>All Students</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FavoriteColor)
-        </th>
-        <th></th>
-    </tr>
+<div class="container">
+    <div class="row">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FavoriteColor)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.StudentID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.StudentID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.StudentID })
-        </td>
-    </tr>
-}
+        @foreach (var item in Model)
+        {
+            
+            <div class="col-md-3">
+                <a href="/Students/Details/@item.StudentID" style="text-decoration:none;">
+                    <div class="card student" style="width: 18rem; background-color:@backColor;">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.LastName, @item.FirstName</h5>
+                            <p class="card-text">My favorite color is @item.FavoriteColor</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-</table>
+            if (backColor == "red")
+            {
+                backColor = "black";
+            }
+            else
+            {
+                backColor = "red";
+            }
+
+            @*<tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FavoriteColor)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.StudentID })
+                    </td>
+                </tr>*@
+        }
+
+        </div>
+        </div>

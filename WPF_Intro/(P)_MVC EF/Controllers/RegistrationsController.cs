@@ -36,16 +36,6 @@ namespace _P__MVC_EF.Controllers
             return View(registration);
         }
 
-        // POST: Registrations/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Registration registration = db.Registrations.Find(id);
-            db.Registrations.Remove(registration);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
 
         protected override void Dispose(bool disposing)
         {

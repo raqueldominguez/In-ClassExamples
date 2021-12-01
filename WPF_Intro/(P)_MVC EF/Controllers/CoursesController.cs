@@ -35,17 +35,6 @@ namespace _P__MVC_EF.Controllers
             return View(course);
         }
 
-        // POST: Courses/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Course course = db.Courses.Find(id);
-            db.Courses.Remove(course);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)
