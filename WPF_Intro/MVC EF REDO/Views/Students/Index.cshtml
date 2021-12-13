@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MVC_EF_REDO.Models.Student>
+
+@{
+    ViewBag.Title = "All Students";
+    string color = "red";
+}
+
+<h2>All Students</h2>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+    <div class="col-4">
+        <a href="/Students/Details/@item.StudentID" style="text-decoration:none;">
+            <div class="card student" style="width: 18rem; background-color:@color;">
+                <div class="card-body">
+                    <h5 class="card-title">@item.LastName, @item.FirstName</h5>
+                    <p class="card-text">
+                        My favorite color is @item.FavoriteColor!
+                        <br />I am enrolled in @item.Registrations.Count().ToString("N0") classes
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+        if (color.ToLower() == "red")
+        {
+            color = "green";
+        }
+        else
+        {
+            color = "red";
+        }
+    }
+</div>
